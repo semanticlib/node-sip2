@@ -13,6 +13,7 @@ const PatronEnableRequest = require('./lib/requests/PatronEnable');
 const ItemInformationRequest = require('./lib/requests/ItemInformation');
 const CheckoutRequest = require('./lib/requests/Checkout');
 const CheckinRequest = require('./lib/requests/Checkin');
+const RenewRequest = require('./lib/requests/Renew');
 const FeePaidRequest = require('./lib/requests/FeePaid');
 const EndPatronSessionRequest = require('./lib/requests/EndPatronSession');
 
@@ -55,6 +56,7 @@ module.exports = {
   ItemInformationRequest,
   CheckoutRequest,
   CheckinRequest,
+  RenewRequest,
   FeePaidRequest,
   EndPatronSessionRequest,
   CheckinResponse,
