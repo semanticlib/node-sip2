@@ -14,12 +14,15 @@ const ItemInformationRequest = require('./lib/requests/ItemInformation');
 const CheckoutRequest = require('./lib/requests/Checkout');
 const CheckinRequest = require('./lib/requests/Checkin');
 const RenewRequest = require('./lib/requests/Renew');
+const RenewAllRequest = require('./lib/requests/RenewAll');
 const FeePaidRequest = require('./lib/requests/FeePaid');
 const EndPatronSessionRequest = require('./lib/requests/EndPatronSession');
 
 // Responses
 const CheckinResponse = require('./lib/responses/Checkin');
 const CheckoutResponse = require('./lib/responses/Checkout');
+//const RenewResponse = require('./lib/responses/Renew');
+const RenewAllResponse = require('./lib/responses/RenewAll');
 const EndSessionResponse = require('./lib/responses/EndSession');
 const FeePaidResponse = require('./lib/responses/FeePaid');
 const ItemInformationResponse = require('./lib/responses/ItemInformation');
@@ -57,10 +60,12 @@ module.exports = {
   CheckoutRequest,
   CheckinRequest,
   RenewRequest,
+  RenewAllRequest,
   FeePaidRequest,
   EndPatronSessionRequest,
   CheckinResponse,
   CheckoutResponse,
+  RenewAllResponse,
   EndSessionResponse,
   FeePaidResponse,
   ItemInformationResponse,
