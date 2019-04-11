@@ -54,3 +54,7 @@ Gemfile.lock
 npm-debug.log
 newrelic_agent.log
 mocha.json
+
+
+# Sip2 Documentation
+docs/sip2

@@ -14,6 +14,7 @@ const PatronEnable = require('../lib/requests/PatronEnable');
 const ItemInformation = require('../lib/requests/ItemInformation');
 const Checkout = require('../lib/requests/Checkout');
 const Checkin = require('../lib/requests/Checkin');
+const Renew = require('../lib/requests/Renew');
 const FeePaid = require('../lib/requests/FeePaid');
 const EndPatronSession = require('../lib/requests/EndPatronSession');
 
@@ -213,6 +214,27 @@ describe('EndPatronSessionRequest', () => {
       endPatronSessionRequest.transactionDate = Message.getDateTime(new Date(1998, 6, 23, 9, 40, 14));
       const testMessage = '3519980723    094014AOCertification Institute ID|AAPatronID|AY3AZEBF2\r\n';
       assert.equal(endPatronSessionRequest.getMessage(), testMessage);
+      done();
+    });
+  });
+});
+
+
+// itemIdentifier, nbDueDate, itemProperties, feeAcknowledged, noBlock = false
+describe('RenewRequest', () => {
+  describe('#getMessage', () => {
+    it('should build a SIP2 renew message', (done) => {
+      const nbDueDate = Message.getDateTime(new Date(1996, 1, 12, 10, 5, 14));
+      const itemIdentifier = '000000000005792';
+      const itemProperties = null;
+      const feeAcknowledged = true;
+      const noBlock = false;
+      const renewRequest = new Renew(itemIdentifier, nbDueDate, itemProperties, feeAcknowledged, noBlock);
+      renewRequest.patronIdentifier = '104000000105';
+      renewRequest.sequence = 3;
+      renewRequest.transactionDate = Message.getDateTime(new Date(1996, 1, 12, 10, 5, 14));
+      const testMessage = '29NN19960212    10051419960212    100514AO|AA104000000105|AB000000000005792|AC|AY3AZEDC2\r\n';
+      assert.equal(renewRequest.getMessage(), testMessage);
       done();
     });
   });

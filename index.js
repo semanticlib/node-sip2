@@ -21,7 +21,7 @@ const EndPatronSessionRequest = require('./lib/requests/EndPatronSession');
 // Responses
 const CheckinResponse = require('./lib/responses/Checkin');
 const CheckoutResponse = require('./lib/responses/Checkout');
-//const RenewResponse = require('./lib/responses/Renew');
+const RenewResponse = require('./lib/responses/Renew');
 const RenewAllResponse = require('./lib/responses/RenewAll');
 const EndSessionResponse = require('./lib/responses/EndSession');
 const FeePaidResponse = require('./lib/responses/FeePaid');
