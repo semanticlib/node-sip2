@@ -68,6 +68,7 @@ module.exports = {
   HoldRequest,
   CheckinResponse,
   CheckoutResponse,
+  RenewResponse,
   RenewAllResponse,
   EndSessionResponse,
   FeePaidResponse,
